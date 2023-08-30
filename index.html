@@ -30,6 +30,7 @@
   </head>
   <body class="page">
     <header class="header decorated-zone">
+      <p class="header__decoration-text" aria-hidden="true">rec</p>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
@@ -55,16 +56,16 @@
             </button>
           </li>
         </ul>
-        <h1 class="header__title">no focus</h1>
-        <div class="header__desc">
-          <p>Что делать, когда не можешь делать ничего</p>
-          <p>Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
-        </div>
       </nav>
+      <h1 class="header__title">no focus</h1>
+      <div class="header__desc">
+        <p>Что делать, когда не можешь делать ничего</p>
+        <p>Или почему нам так сложно сконцентрироваться, особенно когда очень надо</p>
+      </div>
     </header>
     <script src="./scripts/script.js"></script>
     <main>
-      <ul>
+      <ul class="">
         <li>
           <!-- <article> -->
             <h2>Почему сосредоточиться так сложно</h2>
@@ -110,18 +111,76 @@
                   ./images/sunset_mobile_2x.avif 2x" type="image/avif" media="(max-width: 375px)">
                   <source srcset="./images/sunset_mobile_1x.webp 1x,
                   ./images/sunset_mobile_2x.webp 2x" type="image/webp" media="(max-width: 375px)">
-                  <img src="./images/sunset_mobile_1x.png 1x,
-                  ./images/sunset_mobile_2x.png 2x" alt="" loading="lazy">
+                  <source srcset="./images/sunset_tablet_1x.avif 1x,
+                  ./images/sunset_tablet_2x.avif 2x" type="image/avif" media="(375px < width <= 768px)">
+                  <source srcset="./images/sunset_tablet_1x.webp 1x,
+                  ./images/sunset_tablet_2x.webp 2x" type="image/webp" media="(375px < width <= 768px)">
+                  <source srcset="./images/sunset_pc_1x.avif 1x,
+                  ./images/sunset_pc_2x.avif 2x" type="image/avif" media="(768px < width <= 1024px)">
+                  <source srcset="./images/sunset_pc_1x.webp 1x,
+                  ./images/sunset_pc_2x.webp 2x" type="image/webp" media="(768px < width <= 1024px)">
+                  <img src="./images/sunset.png" alt="закат в горах" loading="lazy">
                 </picture>
                 <picture>
-                  <source srcset="" type="image/avif" media="(375px < width <= 768px)">
-                  <source srcset="" type="image/webp" media="(375px < width <= 768px)">
-                  <img src="" alt="" loading="lazy">
+                  <source srcset="./images/ice-cream_mobile_1x.avif 1x,
+                  ./images/ice-cream_mobile_2x.avif 2x" type="image/avif" media="(max-width: 375px)">
+                  <source srcset="./images/ice-cream_mobile_1x.webp 1x,
+                  ./images/ice-cream_mobile_2x.webp 2x" type="image/webp" media="(max-width: 375px)">
+                  <source srcset="./images/ice-cream_tablet_1x.avif 1x,
+                  ./images/ice-cream_tablet_2x.avif 2x" type="image/avif" media="(375px < width <= 768px)">
+                  <source srcset="./images/ice-cream_tablet_1x.webp 1x,
+                  ./images/ice-cream_tablet_2x.webp 2x" type="image/webp" media="(375px < width <= 768px)">
+                  <source srcset="./images/ice-cream_pc_1x.avif 1x,
+                  ./images/ice-cream_pc_2x.avif 2x" type="image/avif" media="(768px < width <= 1024px)">
+                  <source srcset="./images/ice-cream_pc_1x.webp 1x,
+                  ./images/ice-cream_pc_2x.webp 2x" type="image/webp" media="(768px < width <= 1024px)">
+                  <img src="./images/ice-cream.png" alt="мороженое" loading="lazy">
                 </picture>
-                <picture></picture>
-                <picture></picture>
-                <picture></picture>
-                
+                <picture>
+                  <source srcset="./images/tape_mobile_1x.avif 1x,
+                  ./images/tape_mobile_2x.avif 2x" type="image/avif" media="(max-width: 375px)">
+                  <source srcset="./images/tape_mobile_1x.webp 1x,
+                  ./images/tape_mobile_2x.webp 2x" type="image/webp" media="(max-width: 375px)">
+                  <source srcset="./images/tape_tablet_1x.avif 1x,
+                  ./images/tape_tablet_2x.avif 2x" type="image/avif" media="(375px < width <= 768px)">
+                  <source srcset="./images/tape_tablet_1x.webp 1x,
+                  ./images/tape_tablet_2x.webp 2x" type="image/webp" media="(375px < width <= 768px)">
+                  <source srcset="./images/tape_pc_1x.avif 1x,
+                  ./images/tape_pc_2x.avif 2x" type="image/avif" media="(768px < width <= 1024px)">
+                  <source srcset="./images/tape_pc_1x.webp 1x,
+                  ./images/tape_pc_2x.webp 2x" type="image/webp" media="(768px < width <= 1024px)">
+                  <img src="./images/tape.png" alt="касета для магнитофона" loading="lazy">
+                </picture>
+                <picture>
+                  <source srcset="./images/books_mobile_1x.avif 1x,
+                  ./images/books_mobile_2x.avif 2x" type="image/avif" media="(max-width: 375px)">
+                  <source srcset="./images/books_mobile_1x.webp 1x,
+                  ./images/books_mobile_2x.webp 2x" type="image/webp" media="(max-width: 375px)">
+                  <source srcset="./images/books_tablet_1x.avif 1x,
+                  ./images/books_tablet_2x.avif 2x" type="image/avif" media="(375px < width <= 768px)">
+                  <source srcset="./images/books_tablet_1x.webp 1x,
+                  ./images/books_tablet_2x.webp 2x" type="image/webp" media="(375px < width <= 768px)">
+                  <source srcset="./images/books_pc_1x.avif 1x,
+                  ./images/books_pc_2x.avif 2x" type="image/avif" media="(768px < width <= 1024px)">
+                  <source srcset="./images/books_pc_1x.webp 1x,
+                  ./images/books_pc_2x.webp 2x" type="image/webp" media="(768px < width <= 1024px)">
+                  <img src="./images/books.png" alt="стопочка книг" loading="lazy">
+                </picture>
+                <picture>
+                  <source srcset="./images/street_mobile_1x.avif 1x,
+                  ./images/street_mobile_2x.avif 2x" type="image/avif" media="(max-width: 375px)">
+                  <source srcset="./images/street_mobile_1x.webp 1x,
+                  ./images/street_mobile_2x.webp 2x" type="image/webp" media="(max-width: 375px)">
+                  <source srcset="./images/street_tablet_1x.avif 1x,
+                  ./images/street_tablet_2x.avif 2x" type="image/avif" media="(375px < width <= 768px)">
+                  <source srcset="./images/street_tablet_1x.webp 1x,
+                  ./images/street_tablet_2x.webp 2x" type="image/webp" media="(375px < width <= 768px)">
+                  <source srcset="./images/street_pc_1x.avif 1x,
+                  ./images/street_pc_2x.avif 2x" type="image/avif" media="(768px < width <= 1024px)">
+                  <source srcset="./images/street_pc_1x.webp 1x,
+                  ./images/street_pc_2x.webp 2x" type="image/webp" media="(768px < width <= 1024px)">
+                  <img src="./images/street.png" alt="панорамный вид улицы" loading="lazy">
+                </picture>
 <!-- 
 sunset
 ice-cream

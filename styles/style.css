@@ -3,11 +3,39 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: "IBM Plex mono", sans-serif;
+  background-color: var(--bg-color);
+  font-size: var(--font-size);
 }
 
 /* header start */
+
+.header {
+  display: grid;
+}
+
+.header__decoration-text {
+  font-family: inherit;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+  color: var(--header-decoration-color);
+}
+
 .header__title {
   font-family: inherit;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: var(--header-font-size);
+}
+
+.header__theme-menu-button {
+  font-family: inherit;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+  color: var(--button-color);
+}
+
+.header__title {
+  color: var(--header-color);
+  text-shadow: 4px 4px 0px #FF0070;
 }
 /* header end */
+
