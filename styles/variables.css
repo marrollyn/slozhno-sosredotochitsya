@@ -6,12 +6,15 @@
 :root {
    /* Переменные тёмной темы */
   --text-color: #F1B2CE;
-  --header-decoration-color: #FF0070;
-  --button-color: #FF0070;
-  --accent-text-color: #000028;;
+  --accent-color: #FF0070;
+  --accent-decoration-color: #FF0070;
+  /* --header-decoration-color: #FF0070;
+  --button-color: #FF0070; */
+  --accent-text-color: #000028;
   --bg-color: #000028;
-  --accent-bg-color: #FF0070;;
-  --font-size: 1,125rem;
+  /* --accent-bg-color: #FF0070; */
+  --font-size: 1.125rem;
   --header-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --header-color: #DB00FF;
+  --header-bg-image: url(../images/cover-image-dark.png);
 }

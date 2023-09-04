@@ -3,26 +3,56 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: "IBM Plex mono", sans-serif;
-  background-color: var(--bg-color);
-  font-size: var(--font-size);
+  background-color: var(--bg-color, #000028);
+  font-size: var(--font-size, 1.125rem);
+  background-image: var(--header-bg-image, url(../images/cover-image-dark.png));
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+ 
 }
 
 /* header start */
 
 .header {
+  padding-inline-start: 2.67vi;
+  padding-inline-end: 2.67vi;
+  position:relative;
   display: grid;
+  margin-block-start: 10px;
+  min-height: 100vh;
+  
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 63px;
 }
 
 .header__decoration-text {
   font-family: inherit;
   text-transform: uppercase;
-  font-size: var(--font-size);
-  color: var(--header-decoration-color);
+  font-size: var(--font-size, 1.125rem);
+  color: var(--accent-color, #FF0070);
+  position: absolute;
+  left: 80%;
 }
 
-.header__title {
-  font-family: inherit;
-  font-size: var(--header-font-size);
+.header__decoration-text::after {
+  content: '';
+  background-color: var(--accent-color, #FF0070);
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; */
+  /* margin-block-start: 0px; */
+  margin-inline-start: 6px;
+  border-radius: 50%;
+  border:
+  inline-size: 9px;
+  block-size: 9px;
+  position: absolute;
+  border-top: solid var(--accent-color, #FF0070) 1px;
+  border-right: solid var(--accent-color, #FF0070) 1px;
 }
 
 .header__theme-menu-button {
@@ -30,12 +60,177 @@
   text-transform: lowercase;
   background-color: transparent;
   border: none;
-  color: var(--button-color);
+  color: var(--accent-decoration-color, #FF0070);
 }
 
 .header__title {
-  color: var(--header-color);
-  text-shadow: 4px 4px 0px #FF0070;
+  color: var(--header-color, #DB00FF);
+  text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
+  font-family: inherit;
+  font-size: var(--header-font-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
+  
 }
+
+.header__desc {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--accent-text-color, #000028);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  
+}
+
 /* header end */
 
+.content-main-list {
+  margin-inline-start: 2.67vi;
+  margin-inline-end: 2.67vi;
+  background-image: none;
+}
+
+.content-item__subject-title {
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  color: var(--accent-decoration-color, #FF0070);
+}
+
+.content-item__title {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--accent-text-color, #000028);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: inherit;
+}
+
+.content-item__text {
+  font-family: inherit;
+  color: var(--text-color, #F1B2CE);
+  font-size: inherit;
+}
+
+/* .content-list__item .content-item__text:not(:last-of-type) {
+  margin-block-end: 20px;
+} */
+
+/* .content-list__item .content-item__text:last-of-type {
+  margin-block-end: 50px;
+} */
+
+/* .content-list__item .content-item__title:not(:last-of-type) {
+  margin-block-end: 10px;
+} */
+
+/* .content-list__item .content-item__subject-title {
+  margin-block-end: 20px;
+} */
+
+.content-item__subtitle {
+  background-color: var(--accent-color, #FF0070);
+  color: var(--accent-text-color, #000028);
+  font-family: inherit;
+  font-weight: normal;
+  font-size: inherit;
+}
+
+.content-list__item {
+  display: grid;
+  gap: 0.625rem;
+}
+
+.content-item__pic {
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+}
+
+@media (min-width: 375px) {}
+
+@media (min-width: 768px) {
+  /* .content-list__item-pictures {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content 1fr 1fr 1fr;
+    gap:20px;
+  }
+
+  .content-item-pictures__title {
+    grid-column-start: 1;  
+    grid-column-end: 4; 
+  }
+
+  .content-item__pic-sunset {
+    grid-column-start: 1;  
+    grid-column-end: 3; 
+  }
+  .content-item__pic-ice-cream {
+    grid-column-start: 3;  
+    grid-column-end: 4; 
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .content-item__pic-tape {
+    grid-column-start: 1;  
+    grid-column-end: 2; 
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .content-item__pic-books {
+    grid-column-start: 2;  
+    grid-column-end: 3; 
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .content-item__pic-street {
+    grid-column-start: 2;  
+    grid-column-end: 4; 
+    grid-row-start: 4;
+    grid-row-end: 5;
+  } */
+  .content-item__pic {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+  }
+  .content-item-pictures__title {
+    grid-area: title;
+
+  }
+
+  .content-item__pic-sunset {
+    grid-area: sunset;
+
+  }
+  .content-item__pic-ice-cream {
+    grid-area: ice-cream;
+
+  }
+  .content-item__pic-tape {
+    grid-area:tape;
+  }
+  .content-item__pic-books {
+    grid-area: books;
+
+  }
+  .content-item__pic-street {
+    grid-area: street;}
+
+  .content-list__item-pictures {
+    /* grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content 1fr 1fr 1fr; */
+    display:grid;
+    grid-template-areas: 
+    "title title title" 
+    "sunset sunset ice-cream"
+    "tape  books ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+    gap:20px;
+
+  }
+
+
+
+
+}
+
+@media (min-width: 1024px) {}
