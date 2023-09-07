@@ -44,3 +44,20 @@
     --btn-hvr-outln-clr-d:rgb(255 0 112 / 0.40);
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    /* Переменные тёмной темы */
+    --text-color: #f1b2ce;
+    --accent-color: #ff0070;
+    --accent-decoration-color: #ff0070;
+    --accent-text-color: #000028;
+    --bg-color: #000028;
+    --header-color: #db00ff;
+    --header-bg-image: url(../images/cover-image-dark.png);
+    --title-shadow: #ff0070;
+    --title-shadow-another: #ff8dcb;
+    --btn-hover-outln-clr:rgb(50 49 45 / 0.40);
+  }
+}
