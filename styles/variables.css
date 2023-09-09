@@ -5,6 +5,7 @@
 
 :root {
   /* Переменные тёмной темы */
+  --font: "IBM Plex mono";
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --accent-decoration-color: #ff0070;
@@ -61,3 +62,20 @@
     --btn-hover-outln-clr:rgb(50 49 45 / 0.40);
   }
 }
+
+/* 
+@media (prefers-color-scheme: dark) {
+
+  .page.theme_auto .decorated-zone__icon::before {
+    display: block;
+  }
+
+  .page.theme_auto .decorated-zone__text {
+    display: block;
+  }
+
+  .page.theme_auto .header__theme-menu-button:hover {
+    outline: 1px solid var(--btn-hvr-outln-clr-d, rgb(255 0 112 / 0.40));
+    outline-offset: 1px;
+  }
+}  */
