@@ -357,6 +357,7 @@
 
 	.advice-item .content-item__text {
 		margin-block-end: 20px;
+		margin-inline-start: -2px;
 	}
 
 	.questions-item > .content-item__text {
@@ -619,6 +620,10 @@
 
 	.answers-item .content-item__text {
 		margin-block-start: -10px;
+	}
+
+	.advice-item .content-item__text {
+		margin-inline-start: 2px;
 	}
 
 	.advice-item .content-item__subtitle {
